@@ -11,7 +11,7 @@ const update = document.getElementById('ticker-update')
 const currency = document.getElementById('ticker-currency')
 
 let apiKey = process.env.apiKey || ''
-let apiSec = process.env.apiSec || '' 
+let apiSec = process.env.apiSec || ''
 
 const kController = require('./kraken-controller.js')
 const kraken = new kController(apiKey, apiSec)
@@ -29,6 +29,10 @@ ipc.on('change', (event, currency) => {
     kraken.currency = currency
     kraken.fetch(tickerify)
     updateCurrency()
+})
+
+ipc.on('refresh', () => {
+    kraken.fetch(tickerify)
 })
 
 updateCurrency()

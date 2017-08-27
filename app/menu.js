@@ -3,6 +3,8 @@ const dotenv = require('dotenv').config()
 const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
+const Tray = electron.Tray
+
 
 let template = [{
   label: 'Currency',
@@ -84,8 +86,24 @@ if (process.platform === 'darwin') {
 }
 
 app.on('ready', function () {
-  const menu = Menu.buildFromTemplate(template)
-  Menu.setApplicationMenu(menu)
+    let b = template.slice()
+    const menu = Menu.buildFromTemplate(template)
+    const tray = new Tray(__dirname+'/img/icon.png')
+    tray.setContextMenu(Menu.buildFromTemplate([
+        {
+            label:"Refresh",
+            click: function() {
+                app.emit('refresh')
+            }
+        }
+    ]));
+    // ctxt = [
+    //     {
+    //         label:
+    //     }
+    // ]
+    // tray.setContextMenu(ctxt)
+    Menu.setApplicationMenu(menu)
 })
 
 app.on('browser-window-created', function () {

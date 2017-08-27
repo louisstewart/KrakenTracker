@@ -13,6 +13,7 @@ const menu = require('./menu.js');
 let mainWindow
 
 function createWindow () {
+    app.dock.setIcon(__dirname+'/img/krkn.png')
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 300, height: 140, resizable: false, titleBarStyle: 'hidden',
                                         fullscreen: false, fullscreenable: false})
@@ -64,4 +65,8 @@ app.on('activate', function () {
 
 app.on('change', function(cur) {
     mainWindow.webContents.send('change', cur)
+})
+
+app.on('refresh', function() {
+    mainWindow.webContents.send('refresh')
 })
