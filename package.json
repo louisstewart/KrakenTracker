@@ -1,0 +1,29 @@
+{
+  "name": "kraken-tracker",
+  "version": "0.0.1",
+  "description": "Thin app for real-time tracking of ETH and XTC values using kraken-api",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron -r babel-register ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "ETH",
+    "XTC",
+    "Kraken",
+    "Exchange",
+    "Tracker"
+  ],
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13"
+  },
+  "author": "Louis Stewart",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "electron": "~1.6.2",
+    "kraken-api": "latest"
+  }
+}

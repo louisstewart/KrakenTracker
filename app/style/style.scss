@@ -1,0 +1,108 @@
+html {
+    height: 100%
+}
+
+body {
+    background-color: #282c34;
+    color: #d7dae0;
+    font-family: -apple-system, 'Helvetica Neue', helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.drag {
+    height: 30px;
+    width: 100%;
+}
+
+.ticker-main {
+
+}
+
+.ticker-holder {
+    width: 100%;
+    height: 90px;
+}
+
+.ticker-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticker-refresh {
+    padding: 0 20px 0 20px;
+    -webkit-text-stroke: 0.5px #21252b;
+}
+
+#refresh {
+    transition: all 2s linear;
+}
+
+h1 {
+    margin: 0;
+}
+
+.ticker-inner .ticker-value {
+    font-size: 4rem;
+    font-weight: 200;
+    transition: all 0.05s ease-in;
+}
+
+.ticker-inner .ticker-value .ticker-decimal{
+    font-size: 1.2rem !important;
+}
+
+.ticker-arrow {
+    padding: 0 20px 0 20px;
+    transition: all 0.05s ease-in;
+    -webkit-text-stroke: 2px #21252b;
+}
+
+.ticker-footer {
+    box-sizing: border-box;
+    border-top: 1px solid #181a1f;
+    background-color: #21252b;
+    height: 20px;
+    color: #9da5b4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticker-footer > div {
+    padding: 2px 20px 2px 20px;
+}
+
+.up {
+    color:
+}
+
+.down {
+    color:
+}
+
+#arrow {
+    transition: all 0.2s ease-in;
+}
+
+#arrow.down {
+    transform: rotateZ(180 deg);
+}
+
+.refreshing {
+    -webkit-animation: spin 1s linear;
+}
+
+
+//------- ANIMATION
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+    }
+}

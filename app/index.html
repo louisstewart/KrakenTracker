@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kraker</title>
+    <link rel="stylesheet" href="style/style.scss">
+    <link rel="stylesheet" href="style/font-awesome.min.css">
+  </head>
+    <body style="ticker-main">
+        <section style="-webkit-app-region: drag" class=drag></section>
+        <section class="ticker-holder">
+            <div class="ticker-box">
+                <div class="ticker-refresh" >
+                    <div id="refresh">
+                        <span><i class="fa fa-refresh fa-2x"></i></span>
+                    </div>
+                </div>
+                <div class="ticker-inner" id="ticker-value-box">
+                    <h1 class="ticker-value" id="ticker-value-main">-
+                        <span class="ticker-decimal" id="ticker-decimal">-</span></h1>
+                </div>
+                <div class="ticker-arrow">
+                    <div id="arrow">
+                        <i class="fa fa-arrow-up fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ticker-footer">
+                <div class="ticker-last-update" id="ticker-update"></div>
+                <div class="ticker-currency" id="ticker-currency"></div>
+            </div>
+        </section>
+    </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
