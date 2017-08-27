@@ -2,7 +2,18 @@
 
 **Simple desktop app for tracking prices of major currencies on kraken exchange**
 
-This is a minimal Electron application built using the Kraken public API
+This is a minimal Electron application built using the Kraken public API. The only current feature available is viewing the current ticker price of ETH and BTC in various fiat currency denominations.
+
+## Setup
+
+In order to make calls to the private kraken API endpoints (no currennt features use this, but may be added in future - such as placing orders), an API key and secret need to be passed as environment variables. The easiest way to do this is create a .env file and set the following:
+
+```bash
+# Set API key and secret
+apiKey='asdffjvaljhjlas'
+apiSec='arhgrabvanslkasvarsvas=='
+```
+
 
 ## To Use
 
